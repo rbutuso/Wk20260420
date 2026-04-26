@@ -1,5 +1,5 @@
-var names = new Array("To Kill a Mockingbird","Jaws");  // You MUST add more names from homework
-var published = new Array("July 11, 1960", "February 1, 1974");// You MUST add more dates from homework
+var names = new Array("To Kill a Mockingbird","Jaws","Don Quixote", "Moby-Dick", "Northern Lights")
+var published = new Array("July 11, 1960", "February 1, 1974", "July 11, 1615", "October 18, 1851", "November 12, 1995");
 
 // display the data in a tabular format
 function display(){
@@ -35,14 +35,15 @@ function SortIt( ){
                 
                 }
             }
-        if(k != index){
-            temp = published[k];
-            published[k] = published[index];
-            published[index] = temp;
-            // use temp2 to help to swap 
-            //  names[k] and names[index]
-            //  similar to the above 3 lines in example
-            //   .......
+            if(k != index){
+                temp = published[k];
+                published[k] = published[index];
+                published[index] = temp;
+                //keep parallel arrays in sync by swapping names as well
+                temp2 = names[k];
+                names[k] = names[index];
+                names[index] = temp2;
+                //
         }
     }
 
