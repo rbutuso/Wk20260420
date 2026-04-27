@@ -1,41 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <script type="text/javascript" src="Butuso_Lab9.js"></script>
+    <script src="Butuso_Lab9.js"></script>
     <title>CIS 223 Chapter 9 Program</title>
+
+    <style>
+        
+        table {
+        border-collapse: collapse;
+        border: 5px double black;
+        }
+
+        th, td {
+        border: 1px solid black;
+        padding: 8px;
+        }
+
+    </style>
 </head>
 <body  onload="display()">
     <h1>Program 9 - Selection Sort</h1>
 
-    <table id ="workTable" border ="2">
+    <table id ="workTable">
         <tr>
-        <td> <span id = "cell00"/> </td>
-        <td> <span id = "cell01"/> </td>
+            <td> <span id = "cell00"></span> </td>
+            <td> <span id = "cell01"></span> </td>
         </tr>
         
         <tr>
-        <td> <span id = "cell10"/> </td>
-        <td> <span id = "cell11"/> </td>
+            <td> <span id = "cell10"></span></td>
+            <td> <span id = "cell11"></span> </td>
         </tr>
         
         <tr>
-        <td> <span id = "cell20"/> </td>
-        <td> <span id = "cell21"/> </td>
+            <td> <span id = "cell20"></span> </td>
+            <td> <span id = "cell21"></span> </td>
         </tr>
         
         <tr>
-        <td> <span id = "cell30"/> </td>
-        <td> <span id = "cell31"/> </td>
+            <td> <span id = "cell30"></span> </td>
+            <td> <span id = "cell31"></span> </td>
         </tr>
         
         <tr>
-        <td> <span id = "cell40"/> </td>
-        <td> <span id = "cell41"/> </td>
+            <td> <span id = "cell40"></span> </td>
+            <td> <span id = "cell41"></span> </td>
         </tr>
 
     </table>
-    <form>
-        <input type="button" value="Sort" onclick="SortIt()"/>
+    <br>
+
+    <form id="sortForm" style="width: fit-content;">
+    <fieldset>
+        <legend>Sort Options</legend>
+
+        <label>
+        <input type="radio" name="sortOption" value="nameAsc" checked>
+        Name (A to Z)
+        </label><br>
+
+        <label>
+        <input type="radio" name="sortOption" value="nameDesc">
+        Name (Z to A)
+        </label><br>
+
+        <label>
+        <input type="radio" name="sortOption" value="dateAsc">
+        Date (Oldest to Newest)
+        </label><br>
+
+        <label>
+        <input type="radio" name="sortOption" value="dateDesc">
+        Date (Newest to Oldest)
+        </label>
+    </fieldset>
+    <br>
+
+    <button type="button" id="sortBtn" onclick="onSortClick()">Sort It</button>
     </form>
+
 </body>
 </html>
